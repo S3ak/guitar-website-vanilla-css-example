@@ -115,7 +115,9 @@ img {
   background-size: cover;
   padding: 3rem;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
+  gap: 1rem;
 }
 
 .c-hero .c-col {
@@ -126,7 +128,7 @@ img {
 }
 
 .c-hero .c-col--last {
-  display: none;
+  display: flex;
 }
 
 .c-hero .c-btn {
@@ -136,6 +138,7 @@ img {
 @media only screen and (min-width: 600px) {
   .c-hero {
     text-align: left;
+    flex-wrap: nowrap;
   }
 
   .c-hero .c-col {
@@ -158,6 +161,12 @@ img {
   text-decoration: none;
   border-radius: 0.2rem;
   max-width: 280px;
+  appearance: none;
+  border: 0 solid transparent;
+
+  &.c-btn--secondary {
+    background-color: grey;
+  }
 }
 
 .c-features {
@@ -189,12 +198,12 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
 
-.c-reviews .c-row {
-  display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
+  .c-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -261,6 +270,89 @@ img {
   color: white;
   text-align: center;
   padding: 2rem;
+}
+
+.c-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &.row {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  label {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  legend {
+    visibility: hidden;
+  }
+
+  fieldset {
+    border: 0 solid transparent;
+  }
+
+  input:not([type="submit"]) {
+    background-color: white;
+    border-radius: 0.8rem;
+    min-height: 45px;
+    border: 1px solid grey;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: chocolate;
+    }
+
+    &:active,
+    &:focus {
+      background-color: #bb0000;
+    }
+
+    &:disabled {
+      background-color: grey;
+    }
+  }
+
+  input[type="radio"]:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  /* input::placeholder {
+    color: greenyellow;
+  } */
+
+  .c-radio-group {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .c-radio-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-checkbox {
+  width: 14px;
+  height: 14px;
 }
 
 /* Utilities */
