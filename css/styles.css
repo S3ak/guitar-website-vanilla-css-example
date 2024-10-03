@@ -98,13 +98,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-}
-
-.c-nav-bar_list {
-  .is-active {
-    text-decoration: underline;
-    color: brown;
-  }
 
   a {
     color: white;
@@ -117,11 +110,16 @@ img {
     transition: scale 300ms ease-in-out;
     font-weight: bold;
     gap: 0.2rem;
-  }
 
-  a:hover {
-    color: #bb0000;
-    scale: 1.1;
+    &.is-active {
+      text-decoration: underline;
+      color: brown;
+    }
+
+    &:hover {
+      color: #bb0000;
+      scale: 1.1;
+    }
   }
 
   i {
@@ -134,7 +132,6 @@ img {
 }
 
 .c-nav-bar_list--mobile {
-  display: flex;
   flex-direction: column;
   position: fixed;
   z-index: 200;
@@ -144,6 +141,7 @@ img {
   background-color: #202020;
   padding: 2rem;
   transform: translateX(100%);
+  /* This will add the animation for opening and closing */
   transition: all 300ms ease-in-out;
 
   &.is-open {
@@ -152,15 +150,20 @@ img {
 }
 
 .c-btn-nav-toggle {
-  justify-self: flex-end;
   width: 45px;
   min-height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    color: red;
+    scale: 1.1;
+  }
 }
 
-.c-nav-close-btn {
+.c-btn-nav-close {
   width: 45px;
   background: none;
   border: 0 solid transparent;
@@ -170,15 +173,13 @@ img {
   align-self: flex-end;
 }
 
+/* We swap out oru desktop nav when we finally have space for horizontal menu list */
 @media only screen and (min-width: 450px) {
   .c-nav-bar_list--desktop {
     display: flex;
   }
 
-  .c-nav-bar_list--mobile {
-    display: none;
-  }
-
+  .c-nav-bar_list--mobile,
   .c-btn-nav-toggle {
     display: none;
   }
@@ -189,40 +190,39 @@ img {
   min-height: 400px;
   background-image: url(/media/home-header.jpg);
   background-size: cover;
-  padding: 3rem;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   gap: 1rem;
-}
 
-.c-hero .c-col {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.c-hero .c-col--last {
-  display: flex;
-}
-
-.c-hero .c-btn {
-  margin: 1rem auto 0;
-}
-
-@media only screen and (min-width: 600px) {
-  .c-hero {
+  @media only screen and (min-width: 600px) {
     text-align: left;
     flex-wrap: nowrap;
+    padding: 3rem;
   }
 
-  .c-hero .c-col {
+  .c-col {
     flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media only screen and (min-width: 600px) {
+      flex: 1 1 50%;
+    }
   }
 
-  .c-hero .c-col--last {
-    display: block;
+  .c-col--last {
+    display: flex;
+
+    @media only screen and (min-width: 600px) {
+      display: block;
+    }
+  }
+
+  .c-btn {
+    margin: 1rem auto 0;
   }
 }
 
@@ -239,6 +239,12 @@ img {
   max-width: 280px;
   appearance: none;
   border: 0 solid transparent;
+  transition: all 450ms ease-in-out;
+
+  &:hover {
+    filter: saturate(50%);
+    scale: 1.02;
+  }
 
   &.c-btn--secondary {
     background-color: grey;
@@ -249,24 +255,22 @@ img {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-}
 
-.c-features .c-col {
-  flex: 1;
-}
-
-.c-features .c-col:first-child {
-  flex: 1;
-  min-width: 280px;
-}
-
-.c-features .c-col:last-child {
-  flex: 1 1 auto;
-}
-
-@media only screen and (min-width: 600px) {
-  .c-features {
+  @media only screen and (min-width: 600px) {
     flex-wrap: nowrap;
+  }
+
+  .c-col {
+    flex: 1;
+
+    &:first-child {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    &:last-child {
+      flex: 1 1 auto;
+    }
   }
 }
 
@@ -279,12 +283,10 @@ img {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
-  }
-}
 
-@media only screen and (min-width: 600px) {
-  .c-reviews .c-row {
-    flex-wrap: nowrap;
+    @media only screen and (min-width: 600px) {
+      flex-wrap: nowrap;
+    }
   }
 }
 
@@ -339,6 +341,10 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  h3 {
+    line-break: anywhere;
+  }
 }
 
 .c-footer {
@@ -356,6 +362,14 @@ img {
   padding: 1rem;
   border-radius: 1rem;
 
+  fieldset {
+    border: 0 solid transparent;
+  }
+
+  legend {
+    visibility: hidden;
+  }
+
   .input-field {
     display: flex;
     flex-direction: column;
@@ -372,14 +386,6 @@ img {
     font-size: 0.8rem;
   }
 
-  legend {
-    visibility: hidden;
-  }
-
-  fieldset {
-    border: 0 solid transparent;
-  }
-
   input:not([type="submit"]) {
     background-color: white;
     border-radius: 0.8rem;
@@ -388,12 +394,12 @@ img {
     font-size: 1.2rem;
 
     &:hover {
-      background-color: chocolate;
+      border-color: chocolate;
     }
 
     &:active,
     &:focus {
-      background-color: #bb0000;
+      border-color: chocolate;
     }
 
     &:disabled {
