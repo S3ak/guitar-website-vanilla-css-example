@@ -21,7 +21,9 @@
 
         <nav class="c-nav-bar_list c-nav-bar_list--desktop">
           <a href="/"><i class="fa-solid fa-house"></i>Home</a>
-          <a href="/guitars.html" class="is-active">Guitars</a>
+          <a href="/guitars.html" class="is-active"
+            ><i class="fa-solid fa-guitar"></i>Guitars</a
+          >
           <a href="/contact.html">Contact</a>
         </nav>
 
@@ -33,7 +35,9 @@
           <button class="c-btn-nav-close" id="js-btn-nav-close">X</button>
           <section>
             <a href="/"><i class="fa-solid fa-house"></i>Home</a>
-            <a href="/guitars.html" class="is-active">Guitars</a>
+            <a href="/guitars.html" class="is-active"
+              ><i class="fa-solid fa-guitar"></i>Guitars</a
+            >
             <a href="/contact.html">Contact</a>
           </section>
         </nav>
@@ -45,211 +49,9 @@
         <div class="c-col">
           <h1>Guitars</h1>
         </div>
-
-        <div class="c-col c-col--last">
-          <form class="c-form" onSubmit="" autocomplete="on">
-            <h2>Register for free guitar lessons</h2>
-
-            <fieldset>
-              <legend>Peferences</legend>
-              <div class="input-field">
-                <label for="firstName">Name</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="bob dylan"
-                  minlength="2"
-                  pattern="^(?!\s*$).+"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label for="color">Colour of guitar</label>
-
-                <div class="c-radio-group">
-                  <div class="c-radio-row">
-                    <label for="color-green">Green</label>
-                    <input
-                      type="radio"
-                      id="color-green"
-                      name="color"
-                      value="green"
-                    />
-                  </div>
-
-                  <div class="c-radio-row">
-                    <label for="color-blue">Blue</label>
-                    <input
-                      type="radio"
-                      id="color-blue"
-                      name="color"
-                      value="blue"
-                    />
-                  </div>
-
-                  <div class="c-radio-row">
-                    <label for="color-orange">Orange</label>
-                    <input
-                      type="radio"
-                      id="color-orange"
-                      name="color"
-                      value="orange"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="input-field">
-                <label for="city">Where do you live</label>
-
-                <input type="text" list="cities" id="city" name="city" />
-
-                <datalist id="cities">
-                  <option value="Oslo"></option>
-                  <option value="Kristiansand"></option>
-                  <option value="Bergen"></option>
-                </datalist>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Personal logins</legend>
-              <div class="input-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="mail@gmail.com"
-                  disabled
-                  required
-                />
-                <span>Has to contain @</span>
-              </div>
-
-              <div class="input-field">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  required
-                  aria-describedby="password-constraints"
-                />
-              </div>
-
-              <div class="input-field">
-                <label for="passwordConfirm">Confirm Password</label>
-                <input
-                  type="password"
-                  id="passwordConfirm"
-                  name="passwordConfirm"
-                  required
-                />
-              </div>
-
-              <div class="input-field row">
-                <label for="terms">I agree to the terms and conditions</label>
-                <input
-                  type="checkbox"
-                  class="c-checkbox"
-                  id="terms"
-                  name="isTermsAgreed"
-                />
-              </div>
-
-              <section class="btn-group">
-                <input
-                  type="submit"
-                  value="Sign Up"
-                  class="c-btn c-btn--primary"
-                />
-                <button type="reset" class="c-btn c-btn--secondary">
-                  Reset
-                </button>
-              </section>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-
-      <section class="c-features u-section-gutter">
-        <div class="c-col">
-          <h2>Our Guitars are:</h2>
-          <ul>
-            <li>Made with real Canadian Wood</li>
-            <li>Crafted by a family-run business</li>
-            <li>Built to last a lifetime</li>
-            <li>Beautiful uniqure sound</li>
-            <li>Options for all music lovers</li>
-          </ul>
-        </div>
-
-        <div class="c-col">
-          <img
-            srcset="
-              /media/product-specific.jpg                 200w,
-              /media/product.jpg                          681w,
-              /media/home-header.jpg                      990w,
-              /media/home-info_w7ur89_c_scale,w_1200.jpg 1200w
-            "
-            sizes="(max-width: 1200px) 80vw, 1200px"
-            src="/media/home-info.jpg"
-            alt="Hands playing a brown Guitar"
-            class="u-border-radius-md"
-          />
-        </div>
-      </section>
-
-      <section class="c-reviews u-section-gutter u-bg-inverse">
-        <h2>Reviews</h2>
-
-        <article class="c-row">
-          <div class="c-col">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
-              non mollitia, iure voluptas deleniti pariatur illum sint cumque
-              quis, quia veritatis facilis sunt in cum? Iure veritatis
-              consectetur at excepturi!
-            </p>
-
-            <div class="c-row--author">
-              <small class="c-author-name">Bob Willis</small>
-
-              <img
-                src="/media/review-bio.jpg"
-                alt="Bob playing guitar"
-                class="c-img-author"
-              />
-            </div>
-          </div>
-
-          <div class="c-col">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus exercitationem iure tenetur, dolores est eos? Ipsa
-              quibusdam non voluptate officiis recusandae. Repudiandae quasi
-              maxime, natus ipsum magni ipsa quam aliquid.
-            </p>
-
-            <div class="c-row--author">
-              <small class="c-author-name">Sally Oldfield</small>
-
-              <img
-                src="/media/review-bio2.jpg"
-                alt="Sally playing guitar on green couch"
-                class="c-img-author"
-              />
-            </div>
-          </div>
-        </article>
       </section>
 
       <section class="c-gallery u-section-gutter">
-        <h2>View our Guitars</h2>
-
         <div class="c-guitar-blocks-list">
           <article class="c-guitar-block-item">
             <div class="c-gblock_img-container">

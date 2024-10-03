@@ -59,6 +59,11 @@ p + p {
 
 img {
   width: 100%;
+  transition: scale 500ms ease-in-out;
+
+  &:hover {
+    scale: 1.07;
+  }
 }
 
 /* Layout */
