@@ -17,39 +17,33 @@
   <body>
     <header class="l-header">
       <section class="c-nav-bar">
-        <div class="c-logo">Guitar Kings</div>
+        <div class="c-logo">Guitar Kings | Guitars</div>
 
         <nav class="c-nav-bar_list c-nav-bar_list--desktop">
-          <a href="/" class="is-active"
-            ><i class="fa-solid fa-house"></i>Home</a
-          >
-          <a href="/guitars.html">Guitars</a>
+          <a href="/"><i class="fa-solid fa-house"></i>Home</a>
+          <a href="/guitars.html" class="is-active">Guitars</a>
           <a href="/contact.html">Contact</a>
         </nav>
 
-        <div class="c-btn-nav-toggle" data-btn="nav-toggle">
+        <div class="c-btn-nav-toggle" id="js-nav-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
 
-        <!-- THIS IS OFF SCREEN because of CSS transformX -->
-        <section class="c-nav-bar_list c-nav-bar_list--mobile" id="js-nav">
-          <button class="c-nav-close-btn" data-btn="nav-toggle">X</button>
-          <nav>
-            <a href="/" class="is-active"
-              ><i class="fa-solid fa-house"></i>Home</a
-            >
-            <a href="/guitars.html">Guitars</a>
+        <nav class="c-nav-bar_list c-nav-bar_list--mobile" id="js-nav">
+          <button class="c-nav-close-btn" id="js-btn-nav-close">X</button>
+          <section>
+            <a href="/"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="/guitars.html" class="is-active">Guitars</a>
             <a href="/contact.html">Contact</a>
-          </nav>
-        </section>
+          </section>
+        </nav>
       </section>
     </header>
 
     <main class="l-main">
       <section class="c-hero">
         <div class="c-col">
-          <h1>Authentic Handmade Guitars</h1>
-          <a href="/" class="c-btn">View Guitares</a>
+          <h1>Guitars</h1>
         </div>
 
         <div class="c-col c-col--last">

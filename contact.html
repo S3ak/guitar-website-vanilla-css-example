@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guitar Kings</title>
+    <title>Guitar Kings | Contact</title>
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Link to Font Awesome -->
@@ -20,41 +20,35 @@
         <div class="c-logo">Guitar Kings</div>
 
         <nav class="c-nav-bar_list c-nav-bar_list--desktop">
-          <a href="/" class="is-active"
-            ><i class="fa-solid fa-house"></i>Home</a
-          >
+          <a href="/"><i class="fa-solid fa-house"></i>Home</a>
           <a href="/guitars.html">Guitars</a>
-          <a href="/contact.html">Contact</a>
+          <a href="/contact.html" class="is-active">Contact</a>
         </nav>
 
-        <div class="c-btn-nav-toggle" data-btn="nav-toggle">
+        <div class="c-btn-nav-toggle" id="js-nav-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
 
-        <!-- THIS IS OFF SCREEN because of CSS transformX -->
-        <section class="c-nav-bar_list c-nav-bar_list--mobile" id="js-nav">
-          <button class="c-nav-close-btn" data-btn="nav-toggle">X</button>
-          <nav>
-            <a href="/" class="is-active"
-              ><i class="fa-solid fa-house"></i>Home</a
-            >
+        <nav class="c-nav-bar_list c-nav-bar_list--mobile" id="js-nav">
+          <button class="c-nav-close-btn" id="js-btn-nav-close">X</button>
+          <section>
+            <a href="/"><i class="fa-solid fa-house"></i>Home</a>
             <a href="/guitars.html">Guitars</a>
-            <a href="/contact.html">Contact</a>
-          </nav>
-        </section>
+            <a href="/contact.html" class="is-active">Contact</a>
+          </section>
+        </nav>
       </section>
     </header>
 
     <main class="l-main">
       <section class="c-hero">
         <div class="c-col">
-          <h1>Authentic Handmade Guitars</h1>
-          <a href="/" class="c-btn">View Guitares</a>
+          <h1>Contact Us</h1>
         </div>
 
         <div class="c-col c-col--last">
           <form class="c-form" onSubmit="" autocomplete="on">
-            <h2>Register for free guitar lessons</h2>
+            <h2>Reach us by email</h2>
 
             <fieldset>
               <legend>Peferences</legend>
@@ -118,64 +112,6 @@
                   <option value="Bergen"></option>
                 </datalist>
               </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Personal logins</legend>
-              <div class="input-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="mail@gmail.com"
-                  disabled
-                  required
-                />
-                <span>Has to contain @</span>
-              </div>
-
-              <div class="input-field">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  required
-                  aria-describedby="password-constraints"
-                />
-              </div>
-
-              <div class="input-field">
-                <label for="passwordConfirm">Confirm Password</label>
-                <input
-                  type="password"
-                  id="passwordConfirm"
-                  name="passwordConfirm"
-                  required
-                />
-              </div>
-
-              <div class="input-field row">
-                <label for="terms">I agree to the terms and conditions</label>
-                <input
-                  type="checkbox"
-                  class="c-checkbox"
-                  id="terms"
-                  name="isTermsAgreed"
-                />
-              </div>
-
-              <section class="btn-group">
-                <input
-                  type="submit"
-                  value="Sign Up"
-                  class="c-btn c-btn--primary"
-                />
-                <button type="reset" class="c-btn c-btn--secondary">
-                  Reset
-                </button>
-              </section>
             </fieldset>
           </form>
         </div>
