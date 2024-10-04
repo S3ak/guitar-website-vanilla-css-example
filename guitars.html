@@ -47,14 +47,14 @@
     </header>
 
     <main class="l-main">
-      <section class="c-hero">
+      <section class="c-hero .c-hero--small">
         <div class="c-col">
           <h1>Guitars</h1>
         </div>
       </section>
 
       <section class="c-gallery u-section-gutter">
-        <div class="c-guitar-blocks-list">
+        <div class="c-guitar-blocks-list c-guitar-blocks-list--gallery">
           <article class="c-guitar-block-item">
             <div class="c-gblock_img-container">
               <img src="/media/product.jpg" alt="Guitar on pillow" />
@@ -125,5 +125,18 @@
     <footer class="l-footer c-footer">
       <small>Copyright ©</small>
     </footer>
+
+    <aside class="l-aside c-aside-nav-container">
+      <!-- This is the aside nav using grid -->
+      <section class="c-nav-bar_list">
+        <nav>
+          <a href="/" class="is-active"
+            ><i class="fa-solid fa-house"></i>Home</a
+          >
+          <a href="/guitars.html"><i class="fa-solid fa-guitar"></i>Guitars</a>
+          <a href="/contact.html"><i class="fa-solid fa-comment"></i>Contact</a>
+        </nav>
+      </section>
+    </aside>
   </body>
 </html>

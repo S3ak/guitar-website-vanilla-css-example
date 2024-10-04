@@ -33,7 +33,9 @@
           <button class="c-btn-nav-close" id="js-btn-nav-close">X</button>
           <section>
             <a href="/"><i class="fa-solid fa-house"></i>Home</a>
-            <a href="/guitars.html"><i class="fa-solid fa-guitar"></i>Guitars</a>
+            <a href="/guitars.html"
+              ><i class="fa-solid fa-guitar"></i>Guitars</a
+            >
             <a href="/contact.html" class="is-active">Contact</a>
           </section>
         </nav>
@@ -41,89 +43,75 @@
     </header>
 
     <main class="l-main">
-      <section class="c-hero">
+      <section class="c-hero .c-hero--small">
         <div class="c-col">
           <h1>Contact Us</h1>
-        </div>
-
-        <div class="c-col c-col--last">
-
         </div>
       </section>
 
       <section class="c-features u-section-gutter">
         <div class="c-col">
           <h2>Our Guitars are:</h2>
-                  <form class="c-form" onSubmit="" autocomplete="on">
+          <form class="c-form" onSubmit="" autocomplete="on">
             <h2>Reach us by email</h2>
 
-            <fieldset>
-              <legend>Peferences</legend>
-              <div class="input-field">
-                <label for="firstName">Name</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="bob dylan"
-                  minlength="2"
-                  pattern="^(?!\s*$).+"
-                  required
-                />
-              </div>
+            <fieldset class="c-fieldset-gap">
+              <legend>Contat Details</legend>
 
-              <div class="input-field">
-                <div class="c-radio-group">
-                  <div class="c-radio-row">
-                    <label for="color-green">Green</label>
-                    <input
-                      type="radio"
-                      id="color-green"
-                      name="color"
-                      value="green"
-                    />
-                  </div>
-
-                  <div class="c-radio-row">
-                    <label for="color-blue">Blue</label>
-                    <input
-                      type="radio"
-                      id="color-blue"
-                      name="color"
-                      value="blue"
-                    />
-                  </div>
-
-                  <div class="c-radio-row">
-                    <label for="color-orange">Orange</label>
-                    <input
-                      type="radio"
-                      id="color-orange"
-                      name="color"
-                      value="orange"
-                    />
-                  </div>
+              <section class="c-input-group">
+                <div class="input-field">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="birger@hotamil.com"
+                    required
+                  />
                 </div>
-              </div>
 
-              <div class="input-field">
-                <label for="city">Where do you live</label>
+                <div class="input-field">
+                  <label for="message">Message</label>
 
-                <input type="text" list="cities" id="city" name="city" />
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="hi, I love your guitars but..."
+                    required
+                  >
+                  </textarea>
+                </div>
+              </section>
 
-                <datalist id="cities">
-                  <option value="Oslo"></option>
-                  <option value="Kristiansand"></option>
-                  <option value="Bergen"></option>
-                </datalist>
+              <div class="c-form-actions">
+                <input
+                  class="c-btn c-btn--wide"
+                  type="submit"
+                  id="submit"
+                  value="submit"
+                />
               </div>
             </fieldset>
           </form>
+        </div>
       </section>
     </main>
 
     <footer class="l-footer c-footer">
       <small>Copyright ©</small>
     </footer>
+
+    <aside class="l-aside c-aside-nav-container">
+      <!-- This is the aside nav using grid -->
+      <section class="c-nav-bar_list">
+        <nav>
+          <a href="/" class="is-active"
+            ><i class="fa-solid fa-house"></i>Home</a
+          >
+          <a href="/guitars.html"><i class="fa-solid fa-guitar"></i>Guitars</a>
+          <a href="/contact.html"><i class="fa-solid fa-comment"></i>Contact</a>
+        </nav>
+      </section>
+    </aside>
   </body>
 </html>
