@@ -24,7 +24,7 @@
             ><i class="fa-solid fa-house"></i>Home</a
           >
           <a href="/guitars.html"><i class="fa-solid fa-guitar"></i>Guitars</a>
-          <a href="/contact.html">Contact</a>
+          <a href="/contact.html"><i class="fa-solid fa-comment"></i>Contact</a>
         </nav>
 
         <div class="c-btn-nav-toggle" data-btn="nav-toggle">
@@ -41,7 +41,9 @@
             <a href="/guitars.html"
               ><i class="fa-solid fa-guitar"></i>Guitars</a
             >
-            <a href="/contact.html">Contact</a>
+            <a href="/contact.html"
+              ><i class="fa-solid fa-comment"></i>Contact</a
+            >
           </nav>
         </section>
       </section>
@@ -50,136 +52,8 @@
     <main class="l-main">
       <section class="c-hero">
         <div class="c-col">
-          <h1>Authentic Handmade Guitars</h1>
+          <h1 class="c-title">Authentic Handmade Guitars</h1>
           <a href="/" class="c-btn">View Guitares</a>
-        </div>
-
-        <div class="c-col c-col--last">
-          <form class="c-form" onSubmit="" autocomplete="on">
-            <h2>Register for free guitar lessons</h2>
-
-            <fieldset>
-              <legend>Peferences</legend>
-              <div class="input-field">
-                <label for="firstName">Name</label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="bob dylan"
-                  minlength="2"
-                  pattern="^(?!\s*$).+"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label for="color">Colour of guitar</label>
-
-                <div class="c-radio-group">
-                  <div class="c-radio-row">
-                    <label for="color-green">Green</label>
-                    <input
-                      type="radio"
-                      id="color-green"
-                      name="color"
-                      value="green"
-                    />
-                  </div>
-
-                  <div class="c-radio-row">
-                    <label for="color-blue">Blue</label>
-                    <input
-                      type="radio"
-                      id="color-blue"
-                      name="color"
-                      value="blue"
-                    />
-                  </div>
-
-                  <div class="c-radio-row">
-                    <label for="color-orange">Orange</label>
-                    <input
-                      type="radio"
-                      id="color-orange"
-                      name="color"
-                      value="orange"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="input-field">
-                <label for="city">Where do you live</label>
-
-                <input type="text" list="cities" id="city" name="city" />
-
-                <datalist id="cities">
-                  <option value="Oslo"></option>
-                  <option value="Kristiansand"></option>
-                  <option value="Bergen"></option>
-                </datalist>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Personal logins</legend>
-              <div class="input-field">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="mail@gmail.com"
-                  disabled
-                  required
-                />
-                <span>Has to contain @</span>
-              </div>
-
-              <div class="input-field">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  required
-                  aria-describedby="password-constraints"
-                />
-              </div>
-
-              <div class="input-field">
-                <label for="passwordConfirm">Confirm Password</label>
-                <input
-                  type="password"
-                  id="passwordConfirm"
-                  name="passwordConfirm"
-                  required
-                />
-              </div>
-
-              <div class="input-field row">
-                <label for="terms">I agree to the terms and conditions</label>
-                <input
-                  type="checkbox"
-                  class="c-checkbox"
-                  id="terms"
-                  name="isTermsAgreed"
-                />
-              </div>
-
-              <section class="btn-group">
-                <input
-                  type="submit"
-                  value="Sign Up"
-                  class="c-btn c-btn--primary"
-                />
-                <button type="reset" class="c-btn c-btn--secondary">
-                  Reset
-                </button>
-              </section>
-            </fieldset>
-          </form>
         </div>
       </section>
 
