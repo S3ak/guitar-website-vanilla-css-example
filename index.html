@@ -11,6 +11,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+    <!-- Link to animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <script defer src="js/nav.js"></script>
   </head>
@@ -51,15 +56,18 @@
 
     <main class="l-main">
       <section class="c-hero">
-        <div class="c-col">
+        <div class="c-col c-hero_content">
           <h1 class="c-title">Authentic Handmade Guitars</h1>
           <a href="/" class="c-btn">View Guitares</a>
         </div>
+        <div class="c-hero-bg-img-container"></div>
       </section>
 
       <section class="c-features u-section-gutter">
         <div class="c-col">
-          <h2>Our Guitars are:</h2>
+          <h2 class="animate__animated animate__bounceInLeft animate__rotateIn">
+            Our Guitars are:
+          </h2>
           <ul>
             <li>Made with real Canadian Wood</li>
             <li>Crafted by a family-run business</li>
@@ -80,7 +88,7 @@
             sizes="(max-width: 1200px) 80vw, 1200px"
             src="/media/home-info.jpg"
             alt="Hands playing a brown Guitar"
-            class="u-border-radius-md"
+            class="u-border-radius-md c-features_hero-img"
           />
         </div>
       </section>
