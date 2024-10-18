@@ -106,7 +106,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: var(--gray-12);
-  background: var(--gradient-9);
+  background: var(--grey-1);
   display: grid;
   grid-template-areas:
     "header"
