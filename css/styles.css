@@ -669,9 +669,13 @@ img {
   }
 }
 
+.col-left {
+  background-color: green;
+}
+
 .c-checkbox {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Utilities */
