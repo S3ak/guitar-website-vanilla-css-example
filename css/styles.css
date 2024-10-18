@@ -1,3 +1,9 @@
+@import "https://unpkg.com/open-props";
+
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
 /* Global Resets */
 *,
 *:after,
@@ -96,11 +102,11 @@ body {
   min-height: 100dvh;
   flex-direction: column;
   height: 100dvh;
-  font-size: 100%;
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-
+  color: var(--gray-12);
+  background: var(--gradient-9);
   display: grid;
   grid-template-areas:
     "header"
@@ -126,6 +132,10 @@ h5,
 h6 {
   font-family: BootsAndSpurs;
   margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-fluid-1);
 }
 
 p {
@@ -316,7 +326,6 @@ img {
   min-height: 400px;
   /* background-image: url(/media/home-header.jpg);
   background-size: cover; */
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -326,7 +335,6 @@ img {
   @media only screen and (min-width: 600px) {
     text-align: left;
     flex-wrap: nowrap;
-    padding: 3rem;
   }
 
   .c-col {
@@ -358,7 +366,9 @@ img {
 
   .c-hero_content {
     position: relative;
+    padding: var(--size-fluid-2);
     z-index: var(--z-index-mid);
+    backdrop-filter: blur(4px);
   }
 
   .c-hero-bg-img-container {
@@ -367,34 +377,48 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     background-image: url(/media/home-header.jpg);
     background-size: cover;
     transition: all 300ms ease-in-out;
-
-    &:hover {
-      filter: grayscale(80%);
-      opacity: 0.5;
-    }
   }
 
   .c-hero_content:hover + .c-hero-bg-img-container {
-    filter: grayscale(80%);
-    opacity: 0.5;
+    filter: grayscale(100%);
+    /* opacity: 0.9; */
+  }
+
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
 .c-title {
   max-width: 488px;
+  /* We don't want the last word to be a widow */
   text-wrap: balance;
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-fluid-2);
+  background: var(--gradient-20);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c-section--alt {
+  background-image: var(--gradient-8);
+  color: var(--gray-1);
 }
 
 .c-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  background-color: #bb0000;
+  font-size: var(--font-size-2);
+  letter-spacing: var(--font-letterspacing-2);
+  background: var(--gradient-1);
+  box-shadow: var(--shadow-3);
+  border: var(--);
   padding: 1rem;
   color: white;
   text-decoration: none;
@@ -402,11 +426,13 @@ img {
   max-width: 280px;
   appearance: none;
   border: 0 solid transparent;
+  border: var(--border-size-1) solid var(--gray-4);
+  border-radius: var(--radius-blob-1);
   transition: all var(--speed-fastest) cubic-bezier(1, -0.01, 0.53, 1.52);
 
   &:hover {
-    filter: saturate(50%);
-    scale: 1.37;
+    box-shadow: var(--shadow-4);
+    animation: var(--animation-pulse);
   }
 
   &.c-btn--secondary {
@@ -570,6 +596,15 @@ img {
     }
   }
 
+  .input-field input:focus:not(:focus-visible) {
+    outline: green;
+  }
+
+  .input-field input:focus {
+    outline: green;
+    background-color: #bb0000;
+  }
+
   label {
     text-align: left;
     font-size: 0.8rem;
@@ -684,6 +719,10 @@ img {
   text-align: center;
 } */
 
+.c-yt-iframe {
+  height: auto;
+}
+
 @keyframes FedbounceInLeft {
   0%,
   60%,
@@ -719,5 +758,30 @@ img {
   to {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+}
+
+.c-review-details {
+  background-color: #d9d9d9;
+
+  summary {
+    background-color: #bb0000;
+
+    &::before {
+      content: "🫣";
+    }
+  }
+
+  summary::marker {
+    color: green;
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+    display: none;
+    content: "";
+    visibility: hidden;
   }
 }

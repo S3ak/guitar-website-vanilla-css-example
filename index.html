@@ -18,6 +18,7 @@
     />
 
     <script defer src="js/nav.js"></script>
+    <script defer src="js/audio.js"></script>
   </head>
   <body>
     <header class="l-header">
@@ -32,12 +33,14 @@
           <a href="/contact.html"><i class="fa-solid fa-comment"></i>Contact</a>
         </nav>
 
+        <button id="js-toggle-mute" aria-role="mute sound">Mute</button>
+
         <div class="c-btn-nav-toggle" data-btn="nav-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
 
         <!-- THIS IS OFF SCREEN because of CSS transformX -->
-        <section class="c-nav-bar_list c-nav-bar_list--mobile" id="js-nav">
+        <section class="c-nav-bar_list c-nav-bar_list--mobile" id="js-nav" aria-label="nav section">
           <button class="c-btn-nav-close" data-btn="nav-toggle">X</button>
           <nav>
             <a href="/" class="is-active"
@@ -60,7 +63,25 @@
           <h1 class="c-title">Authentic Handmade Guitars</h1>
           <a href="/" class="c-btn">View Guitares</a>
         </div>
-        <div class="c-hero-bg-img-container"></div>
+
+        <div class="c-hero-bg-img-container">
+          <video src="media/playing-guitar.mp4" autoplay loop>
+            <track
+              src="captions.vtt"
+              kind="captions"
+              srclang="en"
+              label="English"
+              default
+            />
+          </video>
+          <audio autoplay>
+            <source
+              src="media/mixkit-guitar-notification-alert-2320.wav"
+              type="audio/wav"
+            />
+            Your browser is old AF. It can't play music
+          </audio>
+        </div>
       </section>
 
       <section class="c-features u-section-gutter">
@@ -68,6 +89,26 @@
           <h2 class="animate__animated animate__bounceInLeft animate__rotateIn">
             Our Guitars are:
           </h2>
+
+          <dialog open>
+            <p>Greetings, one and all!</p>
+            <form method="dialog">
+              <button>OK</button>
+            </form>
+          </dialog>
+
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/vjcmbmjL8qM?si=MOoGtxNLnhGmNtJd"
+            title="YouTube video player"
+            frameborder="5px"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="c-yt-iframe"
+          ></iframe>
+
           <ul>
             <li>Made with real Canadian Wood</li>
             <li>Crafted by a family-run business</li>
@@ -93,7 +134,7 @@
         </div>
       </section>
 
-      <section class="c-reviews u-section-gutter u-bg-inverse">
+      <section class="c-reviews u-section-gutter c-section--alt">
         <h2>Reviews</h2>
 
         <article class="c-row">
@@ -215,11 +256,10 @@
       <!-- This is the aside nav using grid -->
       <section class="c-nav-bar_list">
         <nav>
-          <a href="/" class="is-active"
-            ><i class="fa-solid fa-house"></i>Home</a
+          <a href="/" class="is-active" tabindex="1"
           >
           <a href="/guitars.html"><i class="fa-solid fa-guitar"></i>Guitars</a>
-          <a href="/contact.html"><i class="fa-solid fa-comment"></i>Contact</a>
+          <a href="/contact.html" tabindex="0"><i class="fa-solid fa-comment"></i>Contact</a>
         </nav>
       </section>
     </aside>
