@@ -105,6 +105,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: var(--gray-12);
   background: var(--gradient-9);
   display: grid;
   grid-template-areas:
@@ -325,7 +326,6 @@ img {
   min-height: 400px;
   /* background-image: url(/media/home-header.jpg);
   background-size: cover; */
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -335,7 +335,6 @@ img {
   @media only screen and (min-width: 600px) {
     text-align: left;
     flex-wrap: nowrap;
-    padding: 3rem;
   }
 
   .c-col {
@@ -367,7 +366,9 @@ img {
 
   .c-hero_content {
     position: relative;
+    padding: var(--size-fluid-2);
     z-index: var(--z-index-mid);
+    backdrop-filter: blur(4px);
   }
 
   .c-hero-bg-img-container {
@@ -380,28 +381,11 @@ img {
     background-image: url(/media/home-header.jpg);
     background-size: cover;
     transition: all 300ms ease-in-out;
-    filter: blur(0.5rem);
-    box-shadow: var(--inner-shadow-4);
-
-    &:hover {
-      filter: grayscale(80%);
-      opacity: 0.5;
-    }
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
   }
 
   .c-hero_content:hover + .c-hero-bg-img-container {
-    filter: grayscale(80%);
-    opacity: 0.5;
+    filter: grayscale(100%);
+    /* opacity: 0.9; */
   }
 
   video {
@@ -612,6 +596,15 @@ img {
     }
   }
 
+  .input-field input:focus:not(:focus-visible) {
+    outline: green;
+  }
+
+  .input-field input:focus {
+    outline: green;
+    background-color: #bb0000;
+  }
+
   label {
     text-align: left;
     font-size: 0.8rem;
@@ -726,6 +719,10 @@ img {
   text-align: center;
 } */
 
+.c-yt-iframe {
+  height: auto;
+}
+
 @keyframes FedbounceInLeft {
   0%,
   60%,
@@ -761,5 +758,30 @@ img {
   to {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+}
+
+.c-review-details {
+  background-color: #d9d9d9;
+
+  summary {
+    background-color: #bb0000;
+
+    &::before {
+      content: "🫣";
+    }
+  }
+
+  summary::marker {
+    color: green;
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+    display: none;
+    content: "";
+    visibility: hidden;
   }
 }
