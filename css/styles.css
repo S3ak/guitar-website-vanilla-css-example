@@ -669,6 +669,10 @@ img {
   }
 }
 
+.col-left {
+  background-color: green;
+}
+
 .c-checkbox {
   width: 16px;
   height: 16px;
