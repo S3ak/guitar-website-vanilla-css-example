@@ -75,6 +75,18 @@
   }
 }
 
+@media (prefers-reduced-motion) {
+  :root {
+    --speed-base: 0;
+    --speed-fast: 0;
+    --speed-faster: 0;
+    --speed-fastest: 0;
+    --speed-slow: 0;
+    --speed-slower: 0;
+    --speed-slowest: 0;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 @font-face {
